@@ -8,7 +8,7 @@
    - eda.py
    - prediction.py
    - model.pkl
-2. description.md - Penjelasan gambaran umum project
+2. README.md - Penjelasan gambaran umum project
 3. 01_Notebook_Predicting_Bank_Term_Project.ipynb - Notebook yang berisi pengolahan data menjadi machine learning
 4. 02_Inference.ipynb - Notebook yang berisi Model inference
 5. 03_Conceptual_Problems.txt - Hasil jawaban Conceptual Problems 
