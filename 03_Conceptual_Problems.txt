@@ -1,0 +1,57 @@
+=================================================
+Conceptual Problems
+=================================================
+
+Jawab pertanyaan berikut:
+
+1. Jelaskan latar belakang adanya bagging dan cara kerja bagging !
+
+- Latar belakang adanya bagging : 
+Sebagai metode untuk meningkatkan stabilitas dan akurasi model prediksi, 
+khususnya pada model yang memiliki varian tinggi seperti Decision Tree. 
+Model dengan varian tinggi cenderung sensitif terhadap perubahan kecil 
+pada data pelatihan, sehingga berisiko mengalami overfitting. Bagging 
+dirancang untuk mengurangi variansi model dengan memanfaatkan proses 
+pengambilan sampel acak dan penggabungan hasil 
+prediksi dari beberapa model.
+
+- Cara kerja bagging :
+Pembentukan data bootstrap, dari dataset asli diambil beberapa subset data 
+secara acak dengan metode sampling with replacement (pengambilan sampel dengan pengembalian). 
+Hal ini memungkinkan suatu data muncul lebih dari sekali dalam subset yang berbeda.
+Pelatihan model pada tiap subset, model yang sama dilatih secara terpisah pada masing-masing subset. 
+Karena setiap subset berbeda, pola yang dipelajari oleh tiap model juga bervariasi.
+Penggabungan Hasil Prediksi. Untuk masalah klasifikasi hasil akhir diperoleh melalui metode majority voting (suara terbanyak).
+Untuk masalah regresi hasil akhir diperoleh dari rata-rata prediksi semua model.
+Hasil yang Lebih Stabil dan Akurat. Dengan menggabungkan beberapa model yang dilatih pada data yang berbeda, 
+kesalahan prediksi antar-model dapat saling menutupi, sehingga diperoleh model akhir yang lebih stabil, akurat, 
+dan lebih tahan terhadap overfitting.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Jelaskan perbedaan cara kerja algoritma Random Forest dengan algoritma boosting yang Anda pilih !
+A. Random Forest
+- Merupakan algoritma ensemble berbasis Decision Tree.
+- Membuat banyak decision tree menggunakan teknik bagging (bootstrap aggregating).
+- Setiap pohon dilatih dengan subset data dan subset fitur yang berbeda.
+- Prediksi akhir diambil dari mayoritas suara (klasifikasi) atau rata-rata (regresi).
+- Kuat dalam menangani data berdimensi tinggi, fitur kategorikal, dan missing value, tetapi bisa menjadi kurang akurat jika data terlalu sederhana.
+
+B. SVM (Support Vector Machine)
+- Merupakan algoritma supervised learning berbasis margin maximization.
+- Mencari hyperplane terbaik yang memisahkan kelas dengan margin terlebar.
+- Menggunakan kernel trick untuk memproyeksikan data ke dimensi lebih tinggi agar dapat dipisahkan secara linear.
+- Fokus pada titik data terdekat ke hyperplane (support vectors) untuk menentukan batas keputusan.
+- Efektif untuk data berdimensi tinggi dan non-linear, tetapi sensitif terhadap pemilihan parameter (C, gamma, kernel).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Jelaskan apa yang dimaksud dengan Cross Validation !
+Cross Validation adalah metode evaluasi model machine learning dengan membagi data menjadi beberapa subset (fold). 
+Model dilatih pada sebagian data (training set) dan diuji pada sisanya (validation set),
+lalu proses ini diulang beberapa kali hingga setiap subset pernah menjadi data uji.
+
+Tujuannya adalah untuk:
+- Mengukur performa model secara lebih akurat.
+- Mengurangi risiko overfitting atau underfitting.
+- Memastikan model mampu bekerja baik pada data baru.

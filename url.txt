@@ -1,0 +1,2 @@
+Sumber data : https://archive.ics.uci.edu/dataset/222/bank+marketing
+Dashboard atau deployment : https://huggingface.co/spaces/RivaldiR/Deployment_Predicting_Bank_Term_Project
